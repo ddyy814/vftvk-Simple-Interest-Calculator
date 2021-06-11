@@ -1,16 +1,31 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <title>SIMPLE INTEREST CALCULATOR</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <div class="maindiv>"
+            <h1>Simple Interest Calculator</h1> </br>
+            Amount :   <input type="number"  id="principal">  <br/>
+            
+            No. of Years : <input type="number"  id="years">  <br/>
+            Interest : <input id="slide" type="range" min="1" max="20" step="1" value="10" onchange="updateSlider(this.value)">
+            <div id="sliderAmount"></div>
+        
+        <span id="rate_val">
+            
+        </span>
+        <button onClick="compute()">Compute Interest</button>
+        <span id="result">
+          
+        </span>
+        <span id="principal"></span>
+        <span id="years"></span>
+        </div>
+        <footer>
+            &#169; This Calculator belongs to Mohammed Shahabaz
+        </footer>
     </body>
 </html>
